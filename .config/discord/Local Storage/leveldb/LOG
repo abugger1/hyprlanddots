@@ -1,6 +1,0 @@
-2023/09/17-17:57:27.325 12691 Reusing MANIFEST /home/sshep/.config/discord/Local Storage/leveldb/MANIFEST-000001
-2023/09/17-17:57:27.325 12691 Recovering log #4
-2023/09/17-17:57:27.326 12691 Reusing old log /home/sshep/.config/discord/Local Storage/leveldb/000004.log 
-2023/09/17-22:08:48.662 12691 Level-0 table #8: started
-2023/09/17-22:08:48.790 12691 Level-0 table #8: 1912272 bytes OK
-2023/09/17-22:08:48.795 12691 Delete type=0 #4
