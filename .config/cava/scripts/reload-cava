@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+
+
+
+
+
+# killall cava
+
+
+if [[ $USER = "sshep" ]]
+then
+    cava c
+else
+    cava &
+fi

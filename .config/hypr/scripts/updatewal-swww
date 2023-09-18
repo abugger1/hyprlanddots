@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+#
+#
+#
+#
+# ----------------------------------------------------- 
+# Select wallpaper
+# ----------------------------------------------------- 
+# selected=$(ls -1 ~/wallpaper | grep "jpg" | rofi -dmenu -p "Wallpapers")
+
+# if [ "$selected" ]; then
+
+#     echo "Changing theme..."
+#
+#
+#-------------------------------------------------
+# Select random wallpaper and create color sceme  |
+# ------------------------------------------------
+wal -q -i ~/.wallpapers-uw/
+
+#-------------------------------------------------
+# Load current pywal color sceme                  |
+# ------------------------------------------------
+source "$HOME/.cache/wal/colors.sh"
+
+#-------------------------------------------------
+# Copy color file to waybar folder                |
+# ------------------------------------------------
+cp ~/.cache/wal/colors-waybar.css ~/.config/waybar/
+cp ~/.cache/wal/config ~/.config/cava/
+# ~/.config/cava/scripts/reload-cava
+#-------------------------------------------------
+# Get wallpaper image name                        |
+# ------------------------------------------------
+newwall=$(echo $wallpaper | sed "s|$HOME/.wallpapers-uw/||g")
+
+#-------------------------------------------------
+# Set the new wallpaper                           |
+# ------------------------------------------------
+swww img $wallpaper --transition-step 20 --transition-fps=20
+~/.config/waybar/reload.sh
+
+#-------------------------------------------------
+# Send notification                               |
+# ------------------------------------------------
+notify-send "Theme and Wallpaper update" "With image $newwall"
+
+echo "DONE!"
