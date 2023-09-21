@@ -67,8 +67,12 @@ use({
 
   use("theprimeagen/refactoring.nvim");
   use("nvim-treesitter/nvim-treesitter-context");
-  use("folke/zen-mode.nvim")
-  use("github/copilot.vim")
-  use("eandrju/cellular-automaton.nvim")
-  use("laytan/cloak.nvim")
+  use("folke/zen-mode.nvim");
+  use("github/copilot.vim");
+  use("eandrju/cellular-automaton.nvim");
+  use("laytan/cloak.nvim");
+  use {
+      "windwp/nvim-autopairs",
+      config = function() require("nvim-autopairs").setup {} end
+  }
 end)
