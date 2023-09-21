@@ -1,5 +1,6 @@
 require("sshep.remap")
 require("sshep.set")
+require("telescope").load_extension("git_worktree")
 
 local augroup = vim.api.nvim_create_augroup
 local ThePrimeagenGroup = augroup('ThePrimeagen', {})

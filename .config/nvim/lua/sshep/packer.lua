@@ -19,13 +19,13 @@ use({
 	priority = 1000,
 	opts = {},
 })
---  use({
---	  'rose-pine/neovim',
---	  as = 'rose-pine',
---	  config = function()
---		  vim.cmd('colorscheme rose-pine')
---	  end
---})
+
+use({
+	"folke/tokyonight.nvim",
+	lazy = false,
+	priority = 1000,
+	opts = {},
+})
 
 use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
@@ -75,4 +75,15 @@ use({
       "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
   }
+
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
+   use('ThePrimeagen/git-worktree.nvim')
+   use('nvim-lua/popup.nvim')
+   use('nvim-lua/plenary.nvim')
+   use('nvim-telescope/telescope-fzy-native.nvim')
+
 end)

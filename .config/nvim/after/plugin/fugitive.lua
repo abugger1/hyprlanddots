@@ -1,6 +1,6 @@
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
 
-local Sshep_Fugitive = vim.api.nvim_create_augroup("ThePrimeagen_Fugitive", {})
+local Sshep_Fugitive = vim.api.nvim_create_augroup("Sshep_Fugitive", {})
 
 local autocmd = vim.api.nvim_create_autocmd
 autocmd("BufWinEnter", {
